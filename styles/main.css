@@ -1,0 +1,24 @@
+@import url(desktop.css);
+@import url(media.css);
+
+.light {
+--main-bg-color: aliceblue;
+--secodary-bg-color: lightblue;
+--text-color: #333333;
+}
+.dark {
+--main-bg-color: black;
+--secodary-bg-color: darkblue;
+--text-color: #ffffff;
+}
+.gray {
+--main-bg-color: gray;
+--secodary-bg-color: lightgray;
+--text-color: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

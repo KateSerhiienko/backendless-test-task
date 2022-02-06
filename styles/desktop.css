@@ -1,0 +1,110 @@
+
+/* header */
+
+.wrapper {
+  background-color: var(--main-bg-color);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secodary-bg-color);
+}
+
+.desktop {
+  display: flex;
+}
+.tablet {
+  display: none;
+}
+.phone {
+  display: none;
+}
+
+/* main */
+
+main {
+  min-height: 100vh;
+  padding: 50px 0;
+}
+
+h1 {
+  color: var(--text-color);
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+img:nth-child(12n + 1), img:nth-child(12n +10) {
+  grid-column: span 3;
+  grid-row: span 3;
+  align-self: stretch;
+}
+
+img {
+  width: 100%
+}
+
+/* footer */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secodary-bg-color);
+
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row
+}
+
+.contacts a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.social .icon1 {
+  width: 32px;
+  height: 26px;
+}
+
+.social .icon2 {
+  width: 28px;
+  height: 28px;
+}
+
+.social .icon3 {
+  width: 34px;
+  height: 21px;
+}
+
+.social .icon4 {
+  width: 28px;
+  height: 28px;
+}
+
+.social use {
+  fill: var(--text-color);
+}
