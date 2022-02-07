@@ -2,6 +2,7 @@
 /* header */
 
 .wrapper {
+  position: relative;
   background-color: var(--main-bg-color);
 }
 
@@ -33,8 +34,26 @@ main {
 }
 
 h1 {
-  color: var(--text-color);
   text-align: center;
+  animation: header-animation 300s infinite;
+}
+
+@keyframes header-animation {
+  0% {
+  color: var(--text-color);
+  }
+  25% {
+    color: pink;
+  }
+  50% {
+    color: lightgreen;
+  }
+  75% {
+    color: lemonchiffon;
+  }
+  100% {
+    color: lightskyblue;
+  }
 }
 
 .gallery {
@@ -43,13 +62,13 @@ h1 {
   grid-gap: 10px;
 }
 
-img:nth-child(12n + 1), img:nth-child(12n +10) {
+.image:nth-child(12n + 1), img:nth-child(12n +10) {
   grid-column: span 3;
   grid-row: span 3;
   align-self: stretch;
 }
 
-img {
+.image {
   width: 100%
 }
 
@@ -107,4 +126,53 @@ footer {
 
 .social use {
   fill: var(--text-color);
+}
+
+/* modal */
+
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 750px;
+  height: 310px;
+  padding: 5px;
+  background-color: var(--main-bg-color);
+}
+
+.modal img {
+  width: 500px;
+  height: 300px;
+  margin-right: 10px;
+}
+
+.modal svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.modal h2 {
+  text-align: center;
+  line-height: 2;
+}
+
+.opened {
+  visibility: visible;
 }

@@ -12,7 +12,7 @@
 <body>
   <div class="wrapper light">
     <header>
-      <p>Backendless</p>
+      <h2>Backendless</h2>
       <div class="themes">
         <div class="desktop">
           <div class="theme">
@@ -30,13 +30,13 @@
         </div>
 
         <div class="tablet">
-          <button name="theme" value="light">Light theme</button>
+          <button name="theme" value="light" disabled>Light theme</button>
           <button name="theme" value="dark">Dark theme</button>
           <button name="theme" value="gray">Gray theme</button>
         </div>
 
         <select class="phone">
-          <option value="light">Light theme</option>
+          <option value="light" selected>Light theme</option>
           <option value="dark">Dark theme</option>
           <option value="gray">Gray theme</option>
         </select>
@@ -45,30 +45,30 @@
     <main>
       <h1>Backendless Gallery</h1>
       <section class="gallery">
-        <img src="img/icon1.jpg" alt="Image">
-        <img src="img/icon2.jpg" alt="Image">
-        <img src="img/icon3.jpg" alt="Image">
-        <img src="img/icon4.jpg" alt="Image">
-        <img src="img/icon5.jpg" alt="Image">
-        <img src="img/icon6.jpg" alt="Image">
-        <img src="img/icon7.jpg" alt="Image">
-        <img src="img/icon8.jpg" alt="Image">
-        <img src="img/icon9.jpg" alt="Image">
-        <img src="img/icon10.jpg" alt="Image">
-        <img src="img/icon11.jpg" alt="Image">
-        <img src="img/icon12.jpg" alt="Image">
-        <img src="img/icon1.jpg" alt="Image">
-        <img src="img/icon2.jpg" alt="Image">
-        <img src="img/icon3.jpg" alt="Image">
-        <img src="img/icon4.jpg" alt="Image">
-        <img src="img/icon5.jpg" alt="Image">
-        <img src="img/icon6.jpg" alt="Image">
-        <img src="img/icon7.jpg" alt="Image">
-        <img src="img/icon8.jpg" alt="Image">
-        <img src="img/icon9.jpg" alt="Image">
-        <img src="img/icon10.jpg" alt="Image">
-        <img src="img/icon11.jpg" alt="Image">
-        <img src="img/icon12.jpg" alt="Image">
+        <img class="image" src="img/icon1.jpg" alt="Image">
+        <img class="image" src="img/icon2.jpg" alt="Image">
+        <img class="image" src="img/icon3.jpg" alt="Image">
+        <img class="image" src="img/icon4.jpg" alt="Image">
+        <img class="image" src="img/icon5.jpg" alt="Image">
+        <img class="image" src="img/icon6.jpg" alt="Image">
+        <img class="image" src="img/icon7.jpg" alt="Image">
+        <img class="image" src="img/icon8.jpg" alt="Image">
+        <img class="image" src="img/icon9.jpg" alt="Image">
+        <img class="image" src="img/icon10.jpg" alt="Image">
+        <img class="image" src="img/icon11.jpg" alt="Image">
+        <img class="image" src="img/icon12.jpg" alt="Image">
+        <img class="image" src="img/icon1.jpg" alt="Image">
+        <img class="image" src="img/icon2.jpg" alt="Image">
+        <img class="image" src="img/icon3.jpg" alt="Image">
+        <img class="image" src="img/icon4.jpg" alt="Image">
+        <img class="image" src="img/icon5.jpg" alt="Image">
+        <img class="image" src="img/icon6.jpg" alt="Image">
+        <img class="image" src="img/icon7.jpg" alt="Image">
+        <img class="image" src="img/icon8.jpg" alt="Image">
+        <img class="image" src="img/icon9.jpg" alt="Image">
+        <img class="image" src="img/icon10.jpg" alt="Image">
+        <img class="image" src="img/icon11.jpg" alt="Image">
+        <img class="image" src="img/icon12.jpg" alt="Image">
       </section>
     </main>
     <footer>
@@ -80,17 +80,34 @@
         <a class="social-item" target="_blank">
           <svg class="icon1">
             <use xlink:href="./svg/sprite.svg#twitter"></use>
-          </svg></a>
+          </svg>
+        </a>
         <a class="social-item" target="_blank">
           <svg class="icon2">
             <use xlink:href="./svg/sprite.svg#facebook"></use>
-          </svg></a>
+          </svg>
+        </a>
         <a class="social-item" target="_blank">
           <svg class="icon4">
             <use xlink:href="./svg/sprite.svg#instagram"></use>
-          </svg></a>
+          </svg>
+        </a>
       </div>
     </footer>
+
+    <article class="modal-wrapper">
+      <div class="modal">
+        <svg class="modal-close">
+          <use xlink:href="./svg/sprite.svg#close"></use>
+        </svg>
+        <img class="modal-image">
+        <div class="modal-description">
+          <h2>Modal window</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iure quo optio illum voluptate necessitatibus
+            possimus recusandae quis error earum tempore facilis, sequi vel fugit incidunt harum, quas et placeat?</p>
+        </div>
+      </div>
+    </article>
   </div>
   <script src="script.js"></script>
 </body>

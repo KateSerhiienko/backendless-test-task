@@ -6,10 +6,14 @@
     display: block;
   }
 
+  button[disabled] { 
+    background-color: darkslategray;
+  }
+
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
-  img:nth-child(3n + 1) {
+  image:nth-child(3n + 1) {
     grid-column: span 2;
     grid-row: span 2;
     align-self: stretch;
@@ -24,11 +28,11 @@
     display: block;
   }
 
-  img:nth-child(3n + 1) {
+  image:nth-child(3n + 1) {
     grid-column: span 1;
     grid-row: span 1;
   }
-  img:nth-child(4n + 1) {
+  image:nth-child(4n + 1) {
     grid-column: span 3;
     grid-row: span 3;
   }
