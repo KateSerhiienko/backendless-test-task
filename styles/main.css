@@ -1,24 +1,55 @@
+@import url(fonts.css);
 @import url(desktop.css);
 @import url(media.css);
 
+:root {
+  --brand-color: darkcyan;
+}
 .light {
---main-bg-color: aliceblue;
---secodary-bg-color: lightblue;
+--main-bg-color: azure;
+--secodary-bg-color: rgb(196, 222, 222);
 --text-color: #333333;
 }
 .dark {
---main-bg-color: black;
---secodary-bg-color: darkblue;
+--main-bg-color: dimgrey;
+--secodary-bg-color: #333333;
 --text-color: #ffffff;
 }
-.gray {
---main-bg-color: gray;
---secodary-bg-color: lightgray;
---text-color: #333333;
+.pink {
+--main-bg-color: #725d64;
+--secodary-bg-color: RosyBrown;
+--text-color: #322727;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: PTSans;
+}
+
+input, button, select {
+  outline: none;
+}
+
+@keyframes color-change {
+  0% {
+  color: var(--text-color);
+  }
+  25% {
+    color: pink;
+  }
+  50% {
+    color: var(--brand-color);
+  }
+  75% {
+    color: lightsalmon;
+  }
+  100% {
+    color: var(--text-color);
+  }
 }

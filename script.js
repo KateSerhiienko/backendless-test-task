@@ -34,25 +34,26 @@ select.addEventListener('change', setTheme)
 
 // modal
 
+const body = document.querySelector("body");
 const images = document.querySelectorAll(".image");
-const modalWrapper = document.querySelector(".modal-wrapper");
+const modalOverlay = document.querySelector(".modal-overlay");
 const modalImage = document.querySelector(".modal-image");
 const modalClose = document.querySelector(".modal-close");
 
-modalWrapper.addEventListener('click', function (e) {
+modalOverlay.addEventListener('click', function (e) {
   e.stopPropagation();
   return false;
 })
 
 function openModal() {
-  modalWrapper.classList.add("opened");
+  this.classList.add("choosed");
+  modalOverlay.classList.add("opened");
   modalImage.src = this.src;
-  document.body.style.overflow = 'hidden';
 }
 images.forEach(image => image.addEventListener("click", openModal));
 
 function closeModal() {
-  modalWrapper.classList.remove("opened");
-  document.body.style.overflow = '';
+  images.forEach(image => image.classList.remove("choosed"));
+  modalOverlay.classList.remove("opened");
 }
 modalClose.addEventListener("click", closeModal);

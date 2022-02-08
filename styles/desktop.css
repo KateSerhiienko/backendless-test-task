@@ -1,27 +1,53 @@
-
-/* header */
-
 .wrapper {
   position: relative;
   background-color: var(--main-bg-color);
+  color: var(--text-color);
 }
+
+/* header */
 
 header {
   position: fixed;
-  width: 100%;
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+
   background-color: var(--secodary-bg-color);
+  box-shadow: 0px 0 6px #000;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 26px;
 }
 
 .desktop {
   display: flex;
+  justify-content: space-between;
+  width: 360px;
 }
+
+.theme {
+  cursor: pointer;
+  transition: .15s ease-in;
+}
+
+.theme:hover{
+  color: var(--brand-color);
+}
+
+label {
+  cursor: pointer;
+}
+
 .tablet {
   display: none;
 }
+
 .phone {
   display: none;
 }
@@ -29,37 +55,23 @@ header {
 /* main */
 
 main {
+  max-width: 1080px;
   min-height: 100vh;
-  padding: 50px 0;
+  margin: 0 auto;
+  padding: 70px 10px;
 }
 
 h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
   text-align: center;
-  animation: header-animation 300s infinite;
-}
-
-@keyframes header-animation {
-  0% {
-  color: var(--text-color);
-  }
-  25% {
-    color: pink;
-  }
-  50% {
-    color: lightgreen;
-  }
-  75% {
-    color: lemonchiffon;
-  }
-  100% {
-    color: lightskyblue;
-  }
+  animation: color-change 20s infinite;
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  grid-gap: 14px;
 }
 
 .image:nth-child(12n + 1), img:nth-child(12n +10) {
@@ -69,7 +81,17 @@ h1 {
 }
 
 .image {
-  width: 100%
+  width: 100%;
+  cursor: pointer;
+  transition: .15s ease-in;
+}
+
+.image:hover {
+  filter: brightness(.9);
+}
+
+.choosed {
+  filter: brightness(.9);
 }
 
 /* footer */
@@ -77,95 +99,95 @@ h1 {
 footer {
   position: fixed;
   bottom: 0;
-  width: 100%;
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--secodary-bg-color);
 
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+
+  background-color: var(--secodary-bg-color);
+  box-shadow: 0px 0 6px #000;
 }
 
-.contacts {
+.contacts, .social {
   display: flex;
-  flex-direction: row
+  justify-content: space-between;
+  align-items: center;
+  width: 260px;
 }
 
 .contacts a {
   color: var(--text-color);
-  text-decoration: none;
+  transition: .15s ease-in;
 }
 
-.social {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
+.contacts a:hover {
+  color: var(--brand-color);
 }
 
-.social .icon1 {
-  width: 32px;
-  height: 26px;
-}
-
-.social .icon2 {
-  width: 28px;
-  height: 28px;
-}
-
-.social .icon3 {
+svg {
   width: 34px;
-  height: 21px;
-}
-
-.social .icon4 {
-  width: 28px;
-  height: 28px;
-}
-
-.social use {
+  height: 34px;
   fill: var(--text-color);
+  cursor: pointer;
+  transition: .15s ease-in;
+}
+
+svg:hover {
+  fill: var(--brand-color);
+}
+
+svg.icon1 {
+  width: 28px;
+}
+
+svg.icon4 {
+  width: 26px;
 }
 
 /* modal */
 
 
-.modal-wrapper {
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   visibility: hidden;
   justify-content: center;
   align-items: center;
+
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(51, 51, 51, 0.5);
+  z-index: 2;
 }
 
 .modal {
   position: relative;
   display: flex;
   align-items: center;
-  width: 750px;
-  height: 310px;
-  padding: 5px;
+  width: 900px;
+  height: 380px;
+  padding: 10px;
   background-color: var(--main-bg-color);
 }
 
 .modal img {
-  width: 500px;
-  height: 300px;
-  margin-right: 10px;
+  width: fit-content;
+  height: 360px;
+  margin-right: 20px;
 }
 
 .modal svg {
   position: absolute;
   top: 0;
   right: 0;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
+  transition: none;
 }
 
 .modal h2 {
